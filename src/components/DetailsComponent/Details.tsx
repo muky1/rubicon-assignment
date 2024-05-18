@@ -19,12 +19,13 @@ const Details = ({ item }: ItemDetailsProps) => {
   const navigate = useNavigate();
   const imageUrl = `https://image.tmdb.org/t/p/w500${item.poster_path}`;
   const type = item.name ? "tv" : "movie";
+  const API_KEY = process.env.REACT_APP_API_KEY;
 
   useEffect(() => {
     const fetchVideo = async () => {
       try {
         const response = await axios.get(
-          `https://api.themoviedb.org/3/${type}/${item.id}/videos?api_key=451e66d7f555bf7c6bf7ff3fe8f4662c`
+          `https://api.themoviedb.org/3/${type}/${item.id}/videos?api_key=${API_KEY}`
         );
         const trailer = response.data.results.find(
           (v: any) => v.type === "Trailer"

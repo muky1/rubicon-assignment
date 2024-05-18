@@ -1,9 +1,9 @@
 import { useRecoilState } from "recoil";
 import { useEffect, useState } from "react";
-import { searchTermState } from "../state/atom";
+import { searchTermState } from "../../state/atom";
 import React from "react";
 import styles from "./Search.module.css";
-import useDebounce from "../hooks/useDebounce";
+import useDebounce from "../../hooks/useDebounce";
 
 const Search = () => {
   const [searchTerm, setSearchTerm] = useRecoilState(searchTermState);
