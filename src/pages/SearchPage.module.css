@@ -1,0 +1,17 @@
+.container {
+  height: 100%;
+  width: 90%;
+  margin-inline: auto;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+}
+
+.grid {
+  display: flex;
+  width: 90%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
